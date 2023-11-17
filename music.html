@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: rgb(230, 222, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #7586bd;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+    li {
+    font-family: Khmer OS Muol light;
+    }
+    
+    li a {
+    background-color: #c72bdb;
+    display: block;
+    color: #0c8179;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px;
+    transition: border 0.3s;
+    }
+    
+    li a:hover {
+    background-color: #359cc1;
+    }
+    body {
+        background-image: url('');
+     background-repeat: no-repeat;
+     background-size: cover;
+      }
+      input[type="submit"] {
+        color: red;
+        background-color: yellow;
+        font-size: 16px;
+      }
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </nav>
+
+    <img src="https://wallpaperaccess.com/full/774974.jpg" width="350px">
+    <p>Thanks you for reading</p>
+
+    <div id="video-player">
+        <video src="" id="video" controls autoplay></video>
+        <div id="video-list">
+          <ul>
+            <li><a href="#" class="video-link" data-src="website/video/normal/NEFFEX - Cold ❄️[Copyright Free] No.60.mp4">Cold</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/The Chainsmokers - Closer (Lyric) ft. Halsey.mp4">Closer</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/Lukas Graham - 7 Years [Official Music Video].mp4">7 Years</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/NEFFEX - Grateful [Copyright Free] No.54.mp4">Grateful</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/Lil Nas X - Old Town Road (Official Video) ft. Billy Ray Cyrus.mp4">Old Town Road</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/NEFFEX - Chance [Copyright Free] No.65.mp4">Chance</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/NEFFEX - Destiny 🙌   [Copyright Free] No.8.mp4">Destiny</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/BoyWithUke - Toxic (Official Lyric Video).mp4">Toxic</a></li>
+            <li><a href="#" class="video-link" data-src="website/video/normal/NEFFEX - Best of Me 🤘 [Copyright Free] No.23.mp4">Best Of Me</a></li>
+            <!-- Add more list items for additional videos -->
+          </ul>
+        </div>
+      </div>
+
+      <script>
+
+window.addEventListener('load', function() {
+  var video = document.getElementById('video');
+  var videoLinks = document.getElementsByClassName('video-link');
+  var currentVideoIndex = 0;
+
+  // Play the first video when the page loads
+  playVideo(currentVideoIndex);
+
+  // Add click event listeners to all video links
+  for (var i = 0; i < videoLinks.length; i++) {
+    videoLinks[i].addEventListener('click', function() {
+      var src = this.getAttribute('data-src');
+      currentVideoIndex = Array.from(videoLinks).indexOf(this);
+      playVideo(currentVideoIndex);
+    });
+  }
+
+  // Event listener to play the next video
+  video.addEventListener('ended', function() {
+    currentVideoIndex++;
+    if (currentVideoIndex < videoLinks.length) {
+      playVideo(currentVideoIndex);
+    }
+  });
+
+  function playVideo(index) {
+    var videoSrc = videoLinks[index].getAttribute('data-src');
+    video.src = videoSrc;
+    video.load();
+    video.play();
+  }
+});
+      </script>
+        
+</body>
+</html>
