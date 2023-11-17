@@ -1,0 +1,192 @@
+/* Global Styles */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    padding: 10px;
+    border-bottom: aqua;
+    border-radius: 15px;
+    margin-top: auto;
+    max-width: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: right;
+    padding: 0;
+    border-radius: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+
+  }
+  
+  nav ul li a {
+    background-color: aqua;
+    color: #fff;
+    text-decoration: none;
+    border: 20px;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 26px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  /* Specific Page Styles */
+  .home {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .about, .services, .contact {
+    padding: 20px;
+  }
+
+  /* CSS styles for logo and navigation */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+header {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: #333;
+} */
+.center {
+  text-align: center;
+    justify-content: center;
+}
+body {
+  color: aqua;
+  background-color: black;
+}
+.Btn {
+  margin: 0.2px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: rgb(212, 145, 235);
+}
+.Btn:hover {
+  background-color: aqua;
+}
+.link:hover{
+  background-color: black;
+}
+
+
+ /* Some basic styling */
+ .product-box {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.buy-now-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buy-now-button:hover {
+  background-color: #45a049;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.failed-payment {
+  border-color: red;
+}
+
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 768px) {
+  /* Display 2 product boxes per row on devices with a minimum width of 768px */
+  .product-box {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Display 3 product boxes per row on devices with a minimum width of 1024px */
+  .product-box {
+    width: 33.33%;
+  }
+}
