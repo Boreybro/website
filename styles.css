@@ -142,7 +142,7 @@ input[type="submit"]:hover {
 }
 
 /* Responsive styles */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /* Display 2 product boxes per row on devices with a minimum width of 768px */
   .product-box {
     width: 50%;
@@ -157,7 +157,6 @@ input[type="submit"]:hover {
     width: 33.33%;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   
